@@ -1,0 +1,156 @@
+*{
+    margin:0%;
+    padding:0%;
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+    font-family: arial ;
+}
+.navbar{
+    display: flex;
+    padding: 15px;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+.menu a{
+   padding: 8px;
+   text-decoration: none;
+   color: #444;
+}
+#user{
+    padding: 10px 20px;
+    border-style: none;
+    color:#00a8b5;
+    background: #e2f0f3;
+    border-radius: 8px;
+}
+/* Hamburger Button */
+.hamburger{
+    display: none;
+    background: none;
+    color: black;
+    font-size: 24px;
+    cursor: pointer;
+    margin-left: auto;
+    border: none;
+}
+.content{
+    display: flex;
+    height: 90vh;
+    justify-content: space-around;
+    background-color: #e0e7e8;
+}
+#left{
+    flex-basis: 40%;
+    margin-top: 50px;
+    margin-left: 50px;
+    padding: 20px;
+}
+#left h1{
+    color: #444;
+    font-size: 40px;
+}
+#left span{
+    color: #00a8b5;
+}
+#left p{
+    margin-top: 20px;
+    color: gray ;
+}
+#btns{
+    margin-top: 20px;
+    padding: 15px;
+    text-align: center;
+    font-weight: bold;
+    border-style: none;
+    border-radius: 8px;
+    color: white;
+    background-color: #00a8b5 ;
+}
+#right{
+    flex-basis: 40%;
+    margin-top: 50px;
+}
+#right img{
+    width: 100%;
+}
+/* For mobile screen size max-width: 600px */
+@media only screen and (max-width: 600px) {
+    /* Hamburger */
+    .hamburger{
+        display: block;
+        order: 3;
+    }
+    .menu{
+        position:fixed;
+        top: 70px;
+        right: 0px;
+        background: #111;
+        height: 100vh;
+        width: 60%;
+        padding-top: 60%;
+        transition: all 0.5s ease;
+    }
+    /* Menu hide */
+    .menu{
+        right: -100%;
+    }
+    /* Show menu when button focused */
+    .hamburger:focus+.menu{
+        right: 0px;
+        display: block;
+    }
+    .menu a{
+        margin: 10px;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+    }
+    .logo{
+        font-size: 20px;
+        order: 1;
+    }
+    #user{
+        order: 2;
+        margin-left: 45%;
+    }
+    .content{
+        display: flex;
+        gap: 20px;
+        height: 90vh;
+        flex-direction: column;
+    }
+    #left{
+        height: 30%;
+        margin: 20px;
+        padding: 0px;
+    }
+    #left h1{
+        font-size: 32px;  
+    }
+    #left p{
+        margin-top: 10px;
+        font-size: 10px;
+    }
+    #btns{
+        margin-top: 10px;
+        padding: 10px;
+        border-radius: 10px;
+    }
+    #right{
+        margin-top: 20px;
+        padding: 0;
+    }
+    #right img{
+        width: 100%;
+    }
+}
